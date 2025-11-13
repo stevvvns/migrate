@@ -108,7 +108,7 @@ const commands = {
 
   async down() {
     const disk = getDisk();
-    const stopAt = rest.filter(arg => arg !== '--dry').first();
+    const stopAt = rest.filter(arg => arg !== '--dry')[0];
     await transaction(async () => {
       for (const name of (await config.getAppliedNames()).reverse()) {
         if (stopAt && name.includes(stopAt)) {
