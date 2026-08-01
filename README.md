@@ -45,5 +45,5 @@ For `up` and `down`, you can return a list of SQL strings, throw an error, or do
 `./migrate up` or just `./migrate` will apply all pending migrations.
 
 `./migrate down` will roll back the most recent migration.
-`
+
 `./migrate down <some substring>` will roll back migrations until one contains the given substring. This is pretty dangerous if you don't make destructive `down` ops irreversible, but I'm sure you have backups.
